@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import { Controller , Get , Param , Patch, UseGuards} from "@nestjs/common";
 import {AppService} from "./app.service";
 import { RateLimitGuard } from "../guards/rate-limit.guard";
+=======
+import { Controller , Get , Param , Patch} from "@nestjs/common";
+import {AppService} from "./app.service";
+>>>>>>> 2c2e95a2ef64b97e4382415cd106aadbe4421939
 @Controller()
 export class AppController {
   constructor(
@@ -17,6 +22,7 @@ export class AppController {
   ){
     return this.appService.updateProduct(Number(id), Number(price))
   }
+<<<<<<< HEAD
 
   @Get('products')
     @UseGuards(
@@ -32,4 +38,6 @@ export class AppController {
       ]
     }
   }
+=======
+>>>>>>> 2c2e95a2ef64b97e4382415cd106aadbe4421939
 }
