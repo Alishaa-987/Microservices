@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compileOnSave": false,
+  "files": [],
+  "references": [
+    {
+      "path": "./user-service-e2e"
+    },
+    {
+      "path": "./user-service"
+    }
+  ],
+  "compilerOptions": {}
+}

@@ -1,0 +1,19 @@
+_format_version: "3.0"
+
+upstreams:
+  - name: user-service-upstream
+    targets:
+      - target: host.docker.internal:3000
+        weight: 100
+      - target: host.docker.internal:3001
+        weight: 100
+
+services:
+  - name: user-service
+    url: http://user-service-upstream 
+
+    routes:
+      - name: users-route
+        paths:
+          - /api/users  
+        strip_path: false
