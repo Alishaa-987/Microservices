@@ -3,6 +3,8 @@ import {CacheModule} from "@nestjs/cache-manager";
 import {AppController} from "./app.controller";
 import {AppService} from "./app.service";
 import {redisStore} from "cache-manager-redis-store";
+import { RateLimitGuard } from "../guards/rate-limit.guard";
+import { RedisService } from "../redis/redis.service";
 @Module({
   imports:[
     CacheModule.registerAsync({
@@ -19,6 +21,6 @@ import {redisStore} from "cache-manager-redis-store";
     })
   ],
   controllers: [AppController],
-  providers: [AppService]
+  providers: [AppService , RedisService , RateLimitGuard]
 })
 export class AppModule{}
