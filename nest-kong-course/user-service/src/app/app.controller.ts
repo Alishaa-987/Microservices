@@ -7,7 +7,8 @@ export class AppController {
   getUsers(){
     return {
       success: true,
-      message: "User fetched successfully!"
+      message: "User fetched successfully!",
+      servedByPort: process.env.PORT || 3000
     }
   }
 }

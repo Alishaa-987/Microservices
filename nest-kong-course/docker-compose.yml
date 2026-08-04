@@ -1,7 +1,5 @@
 version: "3.9"
-
 services:
-
   kong:
 
     image: kong:3.8
@@ -11,7 +9,6 @@ services:
     restart: unless-stopped
 
     environment:
-
       KONG_DATABASE: "off"
 
       KONG_DECLARATIVE_CONFIG: /kong/declarative/kong.yml
